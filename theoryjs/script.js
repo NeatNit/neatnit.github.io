@@ -123,8 +123,8 @@ function StartTest() {
             questiondiv.appendChild(img);
         }
 
-        var rightanswerindex = Math.floor(Math.random() * myquestion.wrongAnswers.length);
-        var wronganswertoinsertbefore;
+        var rightanswerindex = Math.floor(Math.random() * (myquestion.wrongAnswers.length + 1));
+        var wronganswertoinsertbefore = null;
         // Add all wrong answers to the question div
         for (var wa = 0; wa < myquestion.wrongAnswers.length; wa++) {
             var ansdiv = document.createElement("div");
